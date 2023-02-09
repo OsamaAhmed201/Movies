@@ -1,0 +1,178 @@
+
+body {
+  margin: 0;
+ 
+  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(67, 55, 69);
+  color: white;
+  /* font-family: 'Dancing Script', cursive; */
+  
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.navbar{
+  background-color: rgb(28, 23, 29) !important;
+  color: white !important;
+} 
+.navbar-brand {
+  color: white !important;
+}
+.nav-link{
+  color: white !important;
+}
+.bodr{
+  border: solid 1px rgb(115, 113, 113);
+}
+.img_movies{
+  height: 180px !important;
+  border-radius: 10px !important;
+}
+.detiles_img{
+  height: 350px;
+}
+.welcom{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dtls-all{
+  display: inline-block;
+  
+  padding: 2px;
+  border-radius: 5px;
+
+}
+.log_out{
+  cursor: pointer;
+}
+img{
+  cursor: pointer; 
+}
+.img_home{
+
+}
+.img_hover{
+transition: 0.5s;
+}
+.cover{
+ width: 100% !important;
+ height: 100% !important;
+ position: absolute; 
+ top: 0;
+ bottom:0 ;
+ left: 0;
+ right: 0;
+ background-color: rgb(84, 84, 84) !important;
+ opacity: 0;
+ transition: 0.5s;
+
+
+}
+.img_people{
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.movie:hover .cover{
+  opacity: 1;
+}
+.movie:hover .img_hover{
+  transform: scale(1.1);
+}
+.img_people{
+  position: relative;
+}
+.detls_img{
+  border-radius: 8px;
+  height: 350px;
+}
+/* /// */
+.card{
+  position: relative;
+ overflow: hidden;
+}
+.card_hover{
+  position: absolute;
+  top: 130%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.589);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+ transition: 1s;
+}
+.card:hover .card_hover{
+  opacity: 1;
+  top: 0;
+}
+.text_hover{
+  color: rgb(205, 166, 244);
+}
+.page-link{
+    background-color: rgb(18, 14, 19) !important;
+    border:rgb(18, 14, 19) 1px solid !important ;
+    color:  rgb(137, 123, 153) !important;
+}
+.page-link:focus{
+  box-shadow: none !important;
+  background-color: rgb(65, 44, 87) !important;
+}
+
+.form-control:focus{
+  background-color: rgb(190, 159, 198) !important;
+  box-shadow: none !important;
+  border: solid 1px rgb(48, 41, 55) !important;
+  box-shadow: rgb(48, 41, 55)  !important;
+}
+.form-control{ background-color: rgb(190, 159, 198) !important;}
+.input_search{
+  background-color: rgb(213, 185, 220) !important;
+  padding: 12px;
+}
+.wtc_movie{
+  background-color: rgb(98, 64, 134) !important;
+  color: white !important;
+  border: rgb(31, 23, 40) !important;
+  border-radius: 15px;
+  padding: 9px;
+ transition: 0.5s;
+ text-decoration: none;
+
+ 
+}
+.wtc_movie:hover{
+  background-color: rgb(57, 38, 76) !important;
+}
+.all_wtc_movie{
+display: flex;
+justify-content: center;
+}
+.navbar-toggler {
+  background-color: white !important;
+}
+.navbar-toggler:focus{
+  box-shadow:none !important;
+}
+.caption_page{
+  background-color: rgba(57, 47, 69, 0.626);
+  padding:15px ;
+  border-radius: 20px;
+}
+.nav_contan:hover{
+  background-color: rgba(98, 84, 116, 0.626) !important;
+  border-radius: 20px;
+  color: rgb(132, 60, 208) !important;
+}
+.nav_contan{
+  margin: 0 5px;
+  transition: 0.2s;
+}
+
