@@ -36,7 +36,7 @@ export default function Navbar(props) {
                   <Link className="nav-link nav_contan" aria-current="page" to="login">Login</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link nav_contan" to="regester">Regester</Link>
+                  <Link className="nav-link nav_contan" to="regester">Register</Link>
                 </li>
               </>}
 

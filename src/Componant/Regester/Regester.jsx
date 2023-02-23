@@ -63,7 +63,7 @@ let[loding,setloding]=useState(false)
 
     return (
         <div className='py-5'>
-             <h2 className='mb-4 text-center'>"" Regester Form ""</h2>
+             <h2 className='mb-4 text-center'>"" Register Form ""</h2>
             {errorList.map((errorUser, index) => <div key={index} className='alert text-danger '>{errorUser.message}</div>)}
             <form onSubmit={regesterDataForm}>
                 <label htmlFor="first_name">FirstName: </label>

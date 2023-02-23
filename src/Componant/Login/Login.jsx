@@ -61,7 +61,7 @@ function getdataInput(e) {
 
 return (
     <div className='py-5'>
-        <h2 className='mb-4 text-center'>""Longin Form ""</h2>
+        <h2 className='mb-4 text-center'>""Login Form ""</h2>
         {errorList.map((errorUser, index) => <div key={index} className='alert text-danger '>{errorUser.message}</div>)}
         <form onSubmit={regesterDataForm}>
             <label htmlFor="email">email:</label>
