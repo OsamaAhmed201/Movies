@@ -64,14 +64,14 @@ export default function TvShow() {
       <div className='col-md-8 '>
         <input onChange={(e) => onSearch(e.target.value)} type="text" placeholder='Search' className='form-control input_search w-100  mt-5' />
       </div>
-        {trendingTvshose.map((movie) => (<div onClick={() => goDetiles(movie.id)} key={movie.id} className=" col-md-3">
+        {trendingTvshose.map((movie) => (<div onClick={() => goDetiles(movie.id)} key={movie.id} className=" col-lg-3 col-md-4 position-relative">
           <div className="card">
             <div className='img_people'>
               <img className='w-100 img_movie' src={imgurl + movie.poster_path} alt="" />
             
               <div className="card_hover">
-                <div>
-                  <p>Name: <span className='text_hover'>{movie.name}</span></p>
+                <div className='text-center'>
+                <h2 className='h3 mb-3 text-primary name_movies'> "{movie.name}"</h2>
                   <p>release date: <span className='text_hover'>{movie.first_air_date}</span></p>
                   <p>vote count: <span className='text_hover'>{movie.vote_count}</span></p>
                   <p>vote average: <span className='text_hover'>{movie.vote_average}</span></p>
@@ -83,6 +83,7 @@ export default function TvShow() {
 
             
           </div>
+          <p className='vote_num '>{movie.vote_average}</p>
         </div>)
 
 

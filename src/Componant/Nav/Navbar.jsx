@@ -6,7 +6,7 @@ export default function Navbar(props) {
     <div>
       <nav className="navbar navbar-expand-lg bg-light">
         <div className="container-fluid">
-          <Link className="navbar-brand" to="#">Navbar</Link>
+          <Link className="navbar-brand me-3" to="#"> Tubi <span className='text-primary'>TV</span> </Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -30,6 +30,7 @@ export default function Navbar(props) {
 
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               {props.userData ? <li className="nav-item">
+                
                 <a onClick={props.gologout} className="nav-link nav_contan log_out" >logout</a>
               </li> : <>
                 <li className="nav-item">

@@ -65,19 +65,20 @@ export default function People() {
         <input onChange={(e) => onSearch(e.target.value)} type="text" placeholder='Search' className='form-control input_search w-100  mt-5' />
       </div>
         
-        {trendingPeople.map((movie) => (<div onClick={() => goDetiles(movie.id)} key={movie.id} className=" col-md-3 col-sm-6">
+        {trendingPeople.map((movie) => (<div onClick={() => goDetiles(movie.id)} key={movie.id} className="col-lg-3 col-md-4 col-sm-6">
           <div className="card">
             <div className='img_people'>
               <img className='w-100 img_hover' src={imgurl + movie.profile_path} alt="" />
               <div className="card_hover">
-                <div>
-                  <h6>Name: <span className='text_hover'>{movie.name}</span></h6>
+                <div className='text-center'>
+                <h2 className='h3 mb-3 text-primary name_movies'> "{movie.name}"</h2>
                   <h6>popularity : <span className='text_hover'>{movie.popularity}</span></h6>
                   <h6>known_for_department: <span className='text_hover'>{movie.known_for_department}</span></h6>
                   <h6>original_name: <span className='text_hover'>{movie.original_name}</span></h6>
                 </div>
 
               </div>
+             
             </div>
 
 

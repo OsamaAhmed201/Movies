@@ -36,11 +36,11 @@ export default function DetilesMovies() {
                         <div className="clr"></div>
                     </div>
 
-                    <h6 className='mb-3'>vote:<span className='text-muted ms-1'>{detiles.vote_average}</span> </h6>
-                    <h6 className='mb-3'>vote_count:<span className='text-muted ms-1 '>{detiles.vote_count}</span></h6>
-                    <h6 className='mb-3'>popularity:<span className='text-muted ms-1 '>{detiles.popularity}</span></h6>
-                    <h6 className='mb-3'>release_date:<span className='text-muted ms-1'>{detiles.release_date}</span></h6>
-                    <p className='text-muted py-5'>{detiles.overview}</p>
+                    <h6 className='mb-3 mt-3'>vote:<span className='bg-detiles-p'>{detiles.vote_average}</span> </h6>
+                    <h6 className='mb-3'>vote_count:<span className='bg-detiles-p '>{detiles.vote_count}</span></h6>
+                    <h6 className='mb-3'>popularity:<span className='bg-detiles-p '>{detiles.popularity}</span></h6>
+                    <h6 className='mb-3'>release_date:<span className='bg-detiles-p'>{detiles.release_date}</span></h6>
+                    <p className='text-muted py-4'>{detiles.overview}</p>
 
                 </div>
                 <div className="all_wtc_movie">

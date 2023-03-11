@@ -36,10 +36,12 @@ export default function DetilesPeople() {
                         <div className="clr"></div>
                     </div>
 
-                    <h6 className='mb-3'>also_known_as:<span className='text-muted ms-1'>{detiles.also_known_as}</span> </h6>
-                    <h6 className='mb-3'>imdb_id:<span className='text-muted ms-1 '>{detiles.imdb_id}</span></h6>
-                    <h6 className='mb-3'>popularity:<span className='text-muted ms-1 '>{detiles.popularity}</span></h6>
-                    <h6 className='mb-3'>place_of_birth:<span className='text-muted ms-1'>{detiles.place_of_birth}</span></h6>
+
+                    <h6 className='mb-3 mt-3'>imdb_id:<span className='bg-detiles-p '>{detiles.imdb_id}</span></h6>
+                    <h6 className='mb-3'>popularity:<span className='bg-detiles-p '>{detiles.popularity}</span></h6>
+                    <h6 className='mb-3'>place_of_birth:<span className='bg-detiles-p'>{detiles.place_of_birth}</span></h6>
+                    <h6 className='mb-3 mt-3'>also_known_as :  <span>{detiles.also_known_as}</span> </h6>
+                   
                    
 
                 </div>

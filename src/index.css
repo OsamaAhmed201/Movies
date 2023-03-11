@@ -1,8 +1,10 @@
 
 body {
   margin: 0;
- 
-  
+  background-image: url(./Componant/img/photo-1553095066-5014bc7b7f2d.jfif);
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: rgb(67, 55, 69);
@@ -15,8 +17,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
 .navbar{
-  background-color: rgb(28, 23, 29) !important;
+  background-color: rgb(30, 24, 52) !important;
   color: white !important;
 } 
 .navbar-brand {
@@ -53,9 +57,7 @@ code {
 img{
   cursor: pointer; 
 }
-.img_home{
 
-}
 .img_hover{
 transition: 0.5s;
 }
@@ -107,8 +109,20 @@ transition: 0.5s;
   justify-content: center;
   align-items: center;
   opacity: 0;
- transition: 1s;
+ transition: top 1s;
 }
+.card p{
+ 
+  position: relative;
+  left: 130%;
+  transition: 1s 0.7s;
+  padding: 5px 15px;
+}
+.card:hover p{
+  left: 0;
+}
+
+
 .card:hover .card_hover{
   opacity: 1;
   top: 0;
@@ -127,15 +141,18 @@ transition: 0.5s;
 }
 
 .form-control:focus{
-  background-color: rgb(190, 159, 198) !important;
+  background-color: rgb(231, 203, 238) !important;
   box-shadow: none !important;
   border: solid 1px rgb(48, 41, 55) !important;
   box-shadow: rgb(48, 41, 55)  !important;
 }
 .form-control{ background-color: rgb(254, 250, 255) !important;}
 .input_search{
-  background-color: rgb(213, 185, 220) !important;
+  background-color: rgb(211, 175, 220) !important;
   padding: 12px;
+}
+.input_search:focus{
+  background-color: rgb(199, 157, 210) !important;
 }
 .wtc_movie{
   background-color: rgb(98, 64, 134) !important;
@@ -175,4 +192,34 @@ justify-content: center;
   margin: 0 5px;
   transition: 0.2s;
 }
+.navbar-brand{
+  font-size: 30px;
+  font-weight: 700;
+}
+.name_movies{
+  font-weight: 900;
+}
+.vote_num{
+  position: absolute;
+  top:0px;
+  right: 12px;
+  padding: 5px;
+  border-radius: 6px;
+  background-color: rgba(91, 91, 182, 0.904);
+}
+.title_regs_log{
+color:white;
+font-weight: 700;
+font-size: 35px;
+margin-top: 27px !important;
 
+}
+.style_l{
+  font-size: 43px;
+  
+}
+.bg-detiles-p{
+  background-color: rgb(66, 66, 245);
+  padding: 3px;
+  border-radius: 10px;
+}

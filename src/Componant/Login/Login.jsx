@@ -29,7 +29,6 @@ async function regesterDataForm(e) {
         let { data } = await axios.post('https://route-movies-api.vercel.app/signin', user)
         console.log(data);
         if (data.message === 'success') {
-            
             localStorage.setItem("userToken",data.token);
             props.saveuserData();
           gotoHome()
@@ -60,16 +59,27 @@ function getdataInput(e) {
 }
 
 return (
-    <div className='py-5'>
-        <h2 className='mb-4 text-center'>""Login Form ""</h2>
-        {errorList.map((errorUser, index) => <div key={index} className='alert text-danger '>{errorUser.message}</div>)}
+    <div className='py-5  w-75 m-auto '>
+        <h2 className=' text-center title_regs_log mt-5'>"" <span className='text-primary style_l'>L</span>ogin Form ""</h2>
+        {/* {errorList.map((errorUser, index) => <div key={index} className='alert text-danger '>{errorUser.message}</div>)} */}
         <form onSubmit={regesterDataForm}>
             <label htmlFor="email">email:</label>
             <input onChange={getdataInput} type="email" id='email' className='form-control mb-2' name='email' />
+            {errorList.map((element,i)=>{
+                if(element.path[0]=='email'){
+                    return <p className='text-danger' key={i}>"email" is not allowed to be empty</p>
+                }
+            })}
             {errorUser.length > 0 ? <div className='alert text-danger'>{errorUser}</div> : ''}
             <label htmlFor="password">password: </label>
             <input onChange={getdataInput} type="password" id='password' className='form-control mb-2' name='password' />
-            <button type='submit' className='btn btn-info mt-3'>
+          {/* ////error// */}
+            {errorList.map((element,i)=>{
+                if(element.path[0]=='password'){
+                    return <p className='text-danger' key={i}>"password" must be a number</p>
+                }
+            })}
+            <button type='submit' className='btn btn-info mt-3 float-end'>
                 {loding?<i className='fa fa-spinner fa-spin'></i>:'Login'}
             </button>
         </form>

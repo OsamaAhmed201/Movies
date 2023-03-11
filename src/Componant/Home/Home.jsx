@@ -51,9 +51,9 @@ export default function Home() {
     SearchMovie(Word)
   }
   return (
-    <>
+    < >
      
-      <div className="row py-3 gy-4">
+      <div className="row py-3 gy-4 ">
       <div className="col-md-4 mt-5 caption_page ">
         <h4>Trending Movies To Watch Now.</h4>
         <p className='text-muted'>Most Watch Movies by day</p>
@@ -64,23 +64,25 @@ export default function Home() {
       
 
         {trendingMovie.map((movie) => (
-          <div onClick={() => goDetiles(movie.id)} key={movie.id} className=" col-md-3 col-sm-6">
-            <div className="card">
-              <div className='img_people'>
+          <div onClick={() => goDetiles(movie.id)} key={movie.id} className=" col-lg-3 col-md-4 col-sm-6 position-relative">
+            <div className="card ">
+              <div className='img_people '>
                 <img className='w-100 img_movie ' src={imgurl + movie.poster_path} alt="" />
                 <div className="card_hover">
-                  <div>
-                    <p>Name:<span className='text_hover'>{movie.title}</span> </p>
+                  <div className='text-center'>
+                  <h2 className='h3 mb-3 text-primary name_movies'> "{movie.title}"</h2>
                     <p>release_date:<span className='text_hover'>{movie.release_date}</span> </p>
                     <p> vote count :<span className='text_hover'>{movie.vote_count}</span> </p>
                     <p>vote average:<span className='text_hover'>{movie.vote_average}</span> </p>
                   </div>
 
                 </div>
+                
               </div>
 
-
+             
             </div>
+            <p className='vote_num '>{movie.vote_average}</p>
           </div>)
 
 
