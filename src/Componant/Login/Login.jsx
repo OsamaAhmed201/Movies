@@ -26,7 +26,7 @@ async function regesterDataForm(e) {
     }
     else{
 
-        let { data } = await axios.post('https://route-movies-api.vercel.app/signin', user)
+        let { data } = await axios.post('https://movies-api.routemisr.com/signin', user)
         console.log(data);
         if (data.message === 'success') {
             localStorage.setItem("userToken",data.token);
@@ -59,8 +59,10 @@ function getdataInput(e) {
 }
 
 return (
-    <div className='py-5  w-75 m-auto '>
-        <h2 className=' text-center title_regs_log mt-5'>"" <span className='text-primary style_l'>L</span>ogin Form ""</h2>
+   <>
+    <h2 className=' text-center title_regs_log mt-4 pt-5'>" <span className='text-primary style_l'>L</span>ogin Form "</h2>
+    <div className='  w-75 m-auto '>
+      
         {/* {errorList.map((errorUser, index) => <div key={index} className='alert text-danger '>{errorUser.message}</div>)} */}
         <form onSubmit={regesterDataForm}>
             <label htmlFor="email">email:</label>
@@ -84,5 +86,7 @@ return (
             </button>
         </form>
     </div>
+    </>
+   
 )
 }

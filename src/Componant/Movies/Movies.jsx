@@ -4,18 +4,21 @@ import { useEffect, useState } from 'react';
 import { Pagination } from 'bootstrap/dist/css/bootstrap.min.css'
 import ReactPaginate from 'react-paginate';
 import { useNavigate } from 'react-router-dom';
-
+import { useDispatch, useSelector } from 'react-redux';
+import { getAllMovie } from '../redux/actions/movieAction'
 
 export default function Movies() {
   let imgurl = 'https://image.tmdb.org/t/p/w500'
   let [PoPMovie, SetPoPMovie] = useState([]);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getAllMovie());
+  }, [])
+  const dataMovies = useSelector((state) => state.movies)
 
-
-  async function getTrindgMovies() {
-    let { data } = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=3288811d6d89d91906ba3ae44ecbc115&language=en-US`)
-    SetPoPMovie(data.results)
-
-  }
+  useEffect(() => {
+    SetPoPMovie(dataMovies)
+  }, [dataMovies])
 
   // pagination
   function handlePageClick(data) {
@@ -27,12 +30,10 @@ export default function Movies() {
     let { data } = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=3288811d6d89d91906ba3ae44ecbc115&language=en-US&page=${page}`)
     SetPoPMovie(data.results)
 
+
   }
   // pagination
-  useEffect(() => {
-    getTrindgMovies();
 
-  }, [])
   //////Details
   let Navigate = useNavigate()
   function goDetiles(id) {
@@ -46,7 +47,7 @@ export default function Movies() {
   // search
   async function SearchMovie(Word) {
     if (Word === "") {
-      getTrindgMovies();
+
     }
     else {
       let { data } = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=3288811d6d89d91906ba3ae44ecbc115&query=${Word}&language=en-US`)
@@ -89,7 +90,7 @@ export default function Movies() {
               </div>
               <p className='vote_num '>{movie.vote_average}</p>
             </div>
-            
+
           ))}
 
 
