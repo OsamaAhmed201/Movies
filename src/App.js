@@ -17,6 +17,8 @@ import DetilesTv from './Componant/DetilesTvshow/DetilesTv';
 import DetilesPeople from './Componant/DetilesPeople/DetilesPeople';
 
 
+
+
 function App() {
   const [userData, setuserData] = useState(null)
   function saveuserData() {
@@ -51,6 +53,7 @@ function App() {
 
       <Navbar userData={userData} gologout={gologout} />
       <div className='container'>
+        
         <Routes>
           <Route path='/home' element={<ProdectdRouting><Home /></ProdectdRouting>}></Route>
           <Route path='/about' element={<ProdectdRouting><About /></ProdectdRouting>}></Route>
